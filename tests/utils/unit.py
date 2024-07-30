@@ -69,7 +69,7 @@ class BaseEventTest(ABC):
             await event.notify()
             notifier_finished.set()
 
-        async with (await builder.build()) as event:
+        async with await builder.build() as event:
             waiter = asyncio.create_task(wait())
             notifier = asyncio.create_task(notify())
 
