@@ -2,10 +2,10 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes } from "prism-react-renderer";
 
-const url = new URL("https://radio-aktywne.github.io/package-pyevents");
+const url = new URL("https://radio-aktywne.github.io/pyevents");
 
 const config: Config = {
-  title: "pyevents package docs",
+  title: "pyevents docs",
   favicon: "favicon.svg?v=1",
 
   url: `${url.protocol}//${url.host}`,
@@ -41,14 +41,14 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "pyevents package docs",
+      title: "pyevents docs",
       logo: {
-        alt: "pyevents package docs logo",
+        alt: "pyevents docs logo",
         src: "logo.svg?v=1",
       },
       items: [
         {
-          href: "https://github.com/radio-aktywne/package-pyevents",
+          href: "https://github.com/radio-aktywne/pyevents",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
