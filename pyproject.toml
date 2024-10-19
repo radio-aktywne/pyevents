@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyevents"
-version = "0.4.0"
+version = "0.5.0"
 description = "Signaling utilities for Python 🐍"
 authors = ["radio-aktywne <it@radioaktywne.pl>"]
 
