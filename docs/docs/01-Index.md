@@ -3,7 +3,7 @@ slug: /
 title: Index
 ---
 
-# pyevents package
+# pyevents
 
 Signaling utilities for Python 🐍
 

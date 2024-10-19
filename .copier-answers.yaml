@@ -1,13 +1,13 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.7.0
+_commit: 0.8.0
 _src_path: gh:radio-aktywne/template-package-python
 accountname: radio-aktywne
 description: Signaling utilities for Python 🐍
 docs: true
-docsurl: https://radio-aktywne.github.io/package-pyevents
+docsurl: https://radio-aktywne.github.io/pyevents
 email: it@radioaktywne.pl
 importname: pyevents
 packagename: pyevents
 releases: true
-reponame: package-pyevents
-repourl: https://github.com/radio-aktywne/package-pyevents
+reponame: pyevents
+repourl: https://github.com/radio-aktywne/pyevents
