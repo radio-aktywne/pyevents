@@ -41,14 +41,14 @@ class EventLifespanBuilder(ABC):
 class BaseEventTest(ABC):
     """Base class for testing a event."""
 
-    @pytest.fixture()
+    @pytest.fixture
     @abstractmethod
     def builder(self) -> EventLifespanBuilder:
         """Return a builder for a event lifespan."""
 
         pass
 
-    @pytest.mark.asyncio(scope="session")
+    @pytest.mark.asyncio(loop_scope="session")
     async def test_wait_notify(self, builder: EventLifespanBuilder) -> None:
         """Test that waiting and notifying works."""
 
