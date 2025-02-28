@@ -21,6 +21,6 @@ class AsyncioEventLifespanBuilder(EventLifespanBuilder):
 
 
 class TestAsyncioEvent(BaseEventTest):
-    @pytest.fixture()
+    @pytest.fixture
     def builder(self) -> AsyncioEventLifespanBuilder:
         return AsyncioEventLifespanBuilder()
