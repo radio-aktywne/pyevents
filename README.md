@@ -2,7 +2,7 @@
 
 <div align="center">
 
-Signaling utilities for Python 🐍
+Signaling utilities package for Python 🐍
 
 [![Lint](https://github.com/radio-aktywne/pyevents/actions/workflows/lint.yaml/badge.svg)](https://github.com/radio-aktywne/pyevents/actions/workflows/lint.yaml)
 [![Test](https://github.com/radio-aktywne/pyevents/actions/workflows/test.yaml/badge.svg)](https://github.com/radio-aktywne/pyevents/actions/workflows/test.yaml)
@@ -14,7 +14,8 @@ Signaling utilities for Python 🐍
 
 ## 💡 About
 
-This package provides implementations of various asynchronous events
+`pyevents` is a [`Python`](https://www.python.org) package
+that provides implementations of various asynchronous events
 to simplify implementing signaling in concurrent code.
 
 ## 📄 Further Reading

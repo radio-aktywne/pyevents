@@ -1,5 +1,6 @@
 import asyncio
 from abc import ABC, abstractmethod
+from types import TracebackType
 
 import pytest
 
@@ -12,20 +13,21 @@ class EventLifespan(ABC):
     async def __aenter__(self) -> Event:
         return await self.enter()
 
-    async def __aexit__(self, *args, **kwargs) -> None:
-        await self.exit()
+    async def __aexit__(
+        self,
+        exception_type: type[BaseException] | None,
+        exception: BaseException | None,
+        traceback: TracebackType | None,
+    ) -> None:
+        return await self.exit()
 
     @abstractmethod
     async def enter(self) -> Event:
         """Enter the lifespan of the event."""
 
-        pass
-
     @abstractmethod
     async def exit(self) -> None:
         """Exit the lifespan of the event."""
-
-        pass
 
 
 class EventLifespanBuilder(ABC):
@@ -34,8 +36,6 @@ class EventLifespanBuilder(ABC):
     @abstractmethod
     async def build(self) -> EventLifespan:
         """Build a event lifespan."""
-
-        pass
 
 
 class BaseEventTest(ABC):
@@ -46,12 +46,9 @@ class BaseEventTest(ABC):
     def builder(self) -> EventLifespanBuilder:
         """Return a builder for a event lifespan."""
 
-        pass
-
     @pytest.mark.asyncio(loop_scope="session")
     async def test_wait_notify(self, builder: EventLifespanBuilder) -> None:
         """Test that waiting and notifying works."""
-
         waiter_allowed_to_wait = asyncio.Event()
         waiter_tried = asyncio.Event()
         waiter_finished = asyncio.Event()
